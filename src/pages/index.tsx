@@ -11,7 +11,6 @@ import { userSelectedThemeContext } from "@/context/userSelectedThemeContext";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Seo from "@/components/Seo";
-import ConnectWithMe from "@/components/ConnectWithMe";
 
 const ContactForm = dynamic(() => import("@/components/home/ContactForm"));
 const HomePageProjects = dynamic(
@@ -134,7 +133,6 @@ export default function Home() {
                 </Link>
               </div>
               <Resourcers />
-              {/* <ConnectWithMe size="md" /> */}
             </div>
             <Image
               className="rounded-full absolute h-[100px] w-[100px] right-5 top-32 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"

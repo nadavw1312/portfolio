@@ -26,7 +26,7 @@ const Footer = () => {
 
       <div className="flex flex-col items-center justify-center gap-2 flex-1 m-auto">
         <p>Connect With Me!</p>
-        <ConnectWithMe size="sm" />
+        <ConnectWithMe />
       </div>
     </footer>
   );
