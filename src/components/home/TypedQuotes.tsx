@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import Typed from "typed.js";
+// import Typed from "typed.js";
 import classNames from "classnames";
+const Typed = require("typed.js");
 
 const TypedQuotes = ({ className }: { className: string }) => {
   // Create reference to store the DOM element containing the animation

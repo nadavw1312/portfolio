@@ -17,11 +17,12 @@ const MySwiper = () => {
       <Swiper
         effect={"coverflow"}
         slidesPerView={"auto"}
-        style={{
-          "--swiper-navigation-color": "#00e887",
-          "--swiper-pagination-color": "#00e887",
-        }}
-        lazy={true}
+        style={
+          {
+            "--swiper-navigation-color": "#00e887",
+            "--swiper-pagination-color": "#00e887",
+          } as any
+        }
         grabCursor={true}
         centeredSlides={true}
         navigation={true}
