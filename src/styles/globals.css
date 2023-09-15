@@ -2,26 +2,242 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  /* inter var - latin */
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: optional;
+    src: url("/fonts/inter-var-latin.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .main-transition {
+    @apply transition-colors duration-200;
+  }
+
+  body {
+    @apply bg-white antialiased main-transition dark:bg-black dark:text-white;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-primary text-3xl font-bold md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply font-primary text-2xl font-bold md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply font-primary text-xl font-bold md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-primary text-lg font-bold md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-primary text-base font-bold md:text-lg;
+  }
+
+  body,
+  .p {
+    @apply font-primary text-sm md:text-base;
+  }
+
+  ::selection {
+    @apply bg-primary-color-light;
+  }
+
+  .key-words {
+    @apply transition-colors bg-selected-light dark:text-primary-color dark:bg-inherit;
+  }
+  /* #endregion  /**======== Typography =========== */
+  .layout {
+    /* 1100px */
+    max-width: 70rem;
+    @apply mx-auto w-11/12;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh_-_160px)];
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(""); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#tsparticles2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(""); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+  padding: 2rem 0;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 400px !important;
+  height: 420px !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 260px !important;
+    height: auto !important;
+  }
+}
+
+.about-code {
+  display: block;
+  font-family: monospace;
+  text-wrap: nowrap;
+  margin: 1em 0px;
+
+  white-space: normal;
+}
+
+.about-code::after {
+  content: "|";
+  color: #3db1ff;
+  -webkit-animation: blink 500ms linear infinite alternate;
+  animation: blink 500ms linear infinite alternate;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.code-info {
+  color: #0ff;
+}
+
+.string-highlight {
+  color: #7fff00;
+}
+
+.code-data {
+  color: #3db1ff;
+}
+
+.code-input {
+  @apply text-black dark:text-white;
+}
+
+[data-fade] {
+  @apply translate-y-10 opacity-0 transition-opacity duration-300 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100;
+}
+.fade-in-start [data-fade] {
+  @apply translate-y-0 opacity-100;
+}
+.fade-in-start [data-fade="1"] {
+  transition-delay: 100ms;
+}
+.fade-in-start [data-fade="2"] {
+  transition-delay: 200ms;
+}
+.fade-in-start [data-fade="3"] {
+  transition-delay: 300ms;
+}
+.fade-in-start [data-fade="4"] {
+  transition-delay: 400ms;
+}
+.fade-in-start [data-fade="5"] {
+  transition-delay: 500ms;
+}
+.fade-in-start [data-fade="6"] {
+  transition-delay: 600ms;
+}
+.fade-in-start [data-fade="7"] {
+  transition-delay: 700ms;
+}
+.fade-in-start [data-fade="8"] {
+  transition-delay: 800ms;
+}
+/* #endregion  /**======== Fade In =========== */
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.Toastify__toast-container--top-center {
+  top: 5rem !important;
 }
