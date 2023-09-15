@@ -5,7 +5,7 @@ import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
 
 const ConnectWithMe = () => {
   const whatsappUrl =
-    "https://wa.me/972544598264?text=I'm%20interested%20in%20your%20car%20for%20sale";
+    "https://wa.me/972544598264?text=I'm%20interested%20in%20your%20skills%20for%20";
 
   const SendEmail = () => {
     const email = "nadavw1999@gmail.com";

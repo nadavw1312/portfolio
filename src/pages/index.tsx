@@ -166,7 +166,7 @@ export default function Home() {
       </motion.div>
       <CircuitBoard primary="black" secondary="purple" />
 
-      <section ref={contactSection} className="min-h-screen flex relative">
+      <section ref={contactSection} className="min-h-[calc(100vh_-_200px)] flex relative">
         {inView && <MatrixRainAnimation />}
         <div
           ref={ref}
