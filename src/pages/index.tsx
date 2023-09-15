@@ -81,8 +81,7 @@ export default function Home() {
 
   const NextSection = ({ section }: { section: string }) => {
     const scrollTo = () => {
-      const ref =
-        section === "projectsSection" ? projectsSection : contactSection;
+      const ref = section === "projectsSection" ? projectsSection : null;
       if (ref) {
         ref?.current?.scrollIntoView({ behavior: "smooth", TimeRanges: 2000 });
       } else {
@@ -138,7 +137,7 @@ export default function Home() {
               {/* <ConnectWithMe size="md" /> */}
             </div>
             <Image
-              className="rounded-full absolute h-[100px] w-[100px] right-5 top-28 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"
+              className="rounded-full absolute h-[100px] w-[100px] right-5 top-32 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"
               src="/man_creating_metaverse.png"
               alt="man using a laptop to create a metaverse"
               width={250}
@@ -157,7 +156,7 @@ export default function Home() {
         viewport={{ amount: 0.4 }}
         ref={projectsSection}
       >
-        <section className="min-h-[screen] flex relative py-20">
+        <section className="min-h-screen flex relative py-20">
           <div className="layout flex flex-col">
             <p className="h2 mb-4">Projects:</p>
             <div className="flex-1 flex items-center justify-center overflow-hidden">
@@ -169,9 +168,12 @@ export default function Home() {
       </motion.div>
       <CircuitBoard primary="black" secondary="purple" />
 
-      <section ref={contactSection} className="min-h-[75vh] flex relative">
+      <section ref={contactSection} className="min-h-screen flex relative">
         {inView && <MatrixRainAnimation />}
-        <div className="layout flex items-center justify-center z-10 mt-14 ">
+        <div
+          ref={ref}
+          className="layout flex items-center justify-center z-10 "
+        >
           <ContactForm />
         </div>
       </section>
