@@ -3,11 +3,7 @@ import Link from "next/link";
 import { MdOutgoingMail } from "react-icons/md";
 import { SiGithub, SiLinkedin, SiWhatsapp } from "react-icons/si";
 
-interface ConnectWithMeProps {
-  size?: "sm" | "md";
-}
-
-const ConnectWithMe = ({ size }: ConnectWithMeProps) => {
+const ConnectWithMe = () => {
   const whatsappUrl =
     "https://wa.me/972544598264?text=I'm%20interested%20in%20your%20car%20for%20sale";
 
@@ -20,32 +16,22 @@ const ConnectWithMe = ({ size }: ConnectWithMeProps) => {
   };
 
   return (
-    <div
-      className={cn(
-        "flex flex-row gap-4 items-center justify-center relative",
-        size === "sm" && "h-4",
-        size === "md" && "h-6"
-      )}
-    >
+    <div className={cn("flex flex-row items-center justify-center gap-4")}>
       <Link
-        className="h-full w-full"
+        className=""
         href="https://www.linkedin.com/in/nadav-bourla-801220184/"
         target="blank"
       >
-        <SiLinkedin className="h-full w-full dark:text-primary-color" />
+        <SiLinkedin className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <Link
-        className="h-full w-full"
-        href="https://github.com/nadavw1312"
-        target="blank"
-      >
-        <SiGithub className="h-full w-full dark:text-primary-color" />
+      <Link className="" href="https://github.com/nadavw1312" target="blank">
+        <SiGithub className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <Link className="h-full w-full" href={whatsappUrl} target="blank">
-        <SiWhatsapp className="h-full w-full dark:text-primary-color" />
+      <Link className="" href={whatsappUrl} target="blank">
+        <SiWhatsapp className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <div onClick={SendEmail} className=" h-full w-full cursor-pointer">
-        <MdOutgoingMail className="h-full w-full dark:text-primary-color" />
+      <div onClick={SendEmail} className="  cursor-pointer">
+        <MdOutgoingMail className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </div>
     </div>
   );

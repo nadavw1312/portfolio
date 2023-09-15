@@ -29,7 +29,7 @@ const TypedQuotes = ({ className }: { className: string }) => {
   }, []);
 
   return (
-    <div className={classNames("text-lg sm:text-xl ", className)}>
+    <div className={classNames("text-md sm:text-xl ", className)}>
       <span ref={el} />
     </div>
   );

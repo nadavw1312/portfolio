@@ -101,7 +101,7 @@ export default function Home() {
             <textarea
               id="message"
               name="message"
-              rows={6}
+              rows={4}
               className="block p-2.5 w-full text-sm  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
               placeholder="Leave a comment..."
             ></textarea>

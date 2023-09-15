@@ -81,7 +81,8 @@ export default function Home() {
 
   const NextSection = ({ section }: { section: string }) => {
     const scrollTo = () => {
-      const ref = section === "projectsSection" ? projectsSection : null;
+      const ref =
+        section === "projectsSection" ? projectsSection : contactSection;
       if (ref) {
         ref?.current?.scrollIntoView({ behavior: "smooth", TimeRanges: 2000 });
       } else {
@@ -137,7 +138,7 @@ export default function Home() {
               {/* <ConnectWithMe size="md" /> */}
             </div>
             <Image
-              className="rounded-full absolute h-[140px] w-[140px] right-5 top-48 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"
+              className="rounded-full absolute h-[100px] w-[100px] right-5 top-28 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"
               src="/man_creating_metaverse.png"
               alt="man using a laptop to create a metaverse"
               width={250}
@@ -170,10 +171,7 @@ export default function Home() {
 
       <section ref={contactSection} className="min-h-[75vh] flex relative">
         {inView && <MatrixRainAnimation />}
-        <div
-          ref={ref}
-          className="layout flex items-center justify-center z-10 "
-        >
+        <div className="layout flex items-center justify-center z-10 mt-14 ">
           <ContactForm />
         </div>
       </section>
