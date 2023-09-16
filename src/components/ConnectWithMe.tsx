@@ -18,19 +18,23 @@ const ConnectWithMe = () => {
   return (
     <div className={cn("flex flex-row items-center justify-center gap-4")}>
       <Link
-        className=""
+        aria-labelledby="linkedin"
         href="https://www.linkedin.com/in/nadav-bourla-801220184/"
         target="blank"
       >
         <SiLinkedin className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <Link className="" href="https://github.com/nadavw1312" target="blank">
+      <Link
+        aria-labelledby="github"
+        href="https://github.com/nadavw1312"
+        target="blank "
+      >
         <SiGithub className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <Link className="" href={whatsappUrl} target="blank">
+      <Link aria-labelledby="whatsapp" href={whatsappUrl} target="blank">
         <SiWhatsapp className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </Link>
-      <div onClick={SendEmail} className="  cursor-pointer">
+      <div onClick={SendEmail} className=" cursor-pointer">
         <MdOutgoingMail className=" h-4 w-4 sm:h-6 sm:w-6 dark:text-primary-color" />
       </div>
     </div>

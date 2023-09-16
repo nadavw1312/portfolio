@@ -108,6 +108,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center">
             <Button
+              aria-labelledby="send message"
               type="submit"
               color="primary"
               isLoading={isLoading}

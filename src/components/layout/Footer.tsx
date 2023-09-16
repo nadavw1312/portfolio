@@ -14,6 +14,7 @@ const Footer = () => {
           <br />
           This Website is
           <a
+            aria-labelledby="code source"
             href="https://github.com/nadavw1312/portfolio"
             target="_blank"
             className="open-sourced"

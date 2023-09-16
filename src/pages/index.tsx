@@ -13,7 +13,6 @@ import Link from "next/link";
 import Seo from "@/components/Seo";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
-
 const ContactForm = dynamic(() => import("@/components/home/ContactForm"));
 const HomePageProjects = dynamic(
   () =>
@@ -70,6 +69,7 @@ export default function Home() {
 
     return resources.map((resource) => (
       <Link
+        aria-labelledby={resource.name}
         key={resource.name}
         target="_blank"
         href={resource.href}
@@ -131,8 +131,10 @@ export default function Home() {
                 I love to learn new tech and experience new challenges
               </p>
               <div className="relative">
-                <Link href={"/about"}>
-                  <GradientOutlineButton>About me</GradientOutlineButton>
+                <Link href={"/about"} prefetch={false}  aria-labelledby="about">
+                  <GradientOutlineButton aria-labelledby="about me">
+                    About me
+                  </GradientOutlineButton>
                 </Link>
               </div>
               <Resourcers />
@@ -169,7 +171,10 @@ export default function Home() {
       </motion.div>
       <CircuitBoard primary="black" secondary="purple" />
 
-      <section ref={contactSection} className="min-h-[calc(100vh_-_200px)] flex relative">
+      <section
+        ref={contactSection}
+        className="min-h-[calc(100vh_-_200px)] flex relative"
+      >
         {inView && <MatrixRainAnimation />}
         <div
           ref={ref}

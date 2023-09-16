@@ -14,6 +14,8 @@ const Header = () => {
         <div className="flex-auto h-full flex flex-row">
           {routes.map((route) => (
             <Link
+              aria-labelledby={route.name}
+              prefetch={false}
               href={route.path}
               key={route.name}
               className="mr-4 hover:text-primary-color"

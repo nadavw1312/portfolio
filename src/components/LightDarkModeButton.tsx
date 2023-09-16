@@ -27,6 +27,7 @@ const LightDarkModeButton = () => {
 
   return isMounted ? (
     <button
+      aria-labelledby="light-dark-mode"
       onClick={hanldeThemeChange}
       className="p-2 h-full w-full flex items-center justify-center border-2 border-gray-300 dark:border-gray-700 rounded-md hover:text-primary-color hover:border-primary-color dark:hover:border-primary-color"
     >

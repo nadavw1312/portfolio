@@ -45,6 +45,7 @@ const ProjectCard = ({
       </div>
       <div className="mt-auto">
         <Link
+          aria-labelledby="see project"
           isExternal
           href={link}
           showAnchorIcon

@@ -13,7 +13,7 @@ const SkillIcon = ({
 
   return (
     <Tooltip showArrow={true} content={skill}>
-      <button>
+      <button aria-labelledby={skill}>
         <Component className={cn("w-6 h-6 inline-block mr-2", className)} />
       </button>
     </Tooltip>
