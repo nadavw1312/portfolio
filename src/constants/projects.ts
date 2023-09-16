@@ -25,7 +25,7 @@ const projects = [
       skills.AWS,
     ],
     link: "https://shituf.tel-aviv.gov.il/#/",
-    imageSrc: "/tel-aviv-project.png",
+    imageSrc: "/tel-aviv-project.webp",
     showOnHomePage: true,
   },
   {
@@ -42,7 +42,7 @@ const projects = [
       skills.AWS,
     ],
     link: "https://online.tasa.co.il/",
-    imageSrc: "/tasa-candies-project.png",
+    imageSrc: "/tasa-candies-project.webp",
     showOnHomePage: true,
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     associated: [],
     skills: [skills.Nextjs, skills.TypeScript, skills.Tailwindcss],
     link: "https://crypto-market-bice.vercel.app/",
-    imageSrc: "/crypto-market.png",
+    imageSrc: "/crypto-market.webp",
     showOnHomePage: false,
   },
   {
@@ -66,7 +66,7 @@ const projects = [
       skills.MongoDB,
     ],
     link: "https://book-view.onrender.com/",
-    imageSrc: "/book-view.png",
+    imageSrc: "/book-view.webp",
     showOnHomePage: true,
   },
 ];

@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback } from "react";
 import Particles from "react-particles";
 import type { Engine, IOptions, RecursivePartial } from "tsparticles-engine";
@@ -8,7 +9,9 @@ interface ParticlesContainerBrainProps {
   id: string;
 }
 
-export default function ParticlesContainerBrain(props: ParticlesContainerBrainProps) {
+export default function ParticlesContainerBrain(
+  props: ParticlesContainerBrainProps
+) {
   const { theme } = useTheme();
 
   const isDarkMode = theme === "dark";

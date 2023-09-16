@@ -11,6 +11,8 @@ import { userSelectedThemeContext } from "@/context/userSelectedThemeContext";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Seo from "@/components/Seo";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
+
 
 const ContactForm = dynamic(() => import("@/components/home/ContactForm"));
 const HomePageProjects = dynamic(
@@ -45,6 +47,7 @@ export default function Home() {
   const { selectedTheme } = useContext(userSelectedThemeContext);
   const projectsSection = useRef<any>(null);
   const contactSection = useRef(null);
+  const breakpoints = useBreakpoint();
 
   useEffect(() => {
     if (inView) {
@@ -136,7 +139,7 @@ export default function Home() {
             </div>
             <Image
               className="rounded-full absolute h-[100px] w-[100px] right-5 top-32 sm:right-10 sm:top-80 sm:h-[200px] sm:w-[200px] md:right-32 md:top-48 md:h-[250px] md:w-[250px]"
-              src="/man_creating_metaverse.png"
+              src="/man_creating_metaverse.webp"
               alt="man using a laptop to create a metaverse"
               width={250}
               height={250}

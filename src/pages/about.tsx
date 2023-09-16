@@ -58,7 +58,7 @@ const About = () => {
                 data-fade="2"
               >
                 <Image
-                  src={"/man-monitors.png"}
+                  src={"/man-monitors.webp"}
                   alt="Me matrix style"
                   layout="fill"
                   objectFit="contain"
