@@ -80,7 +80,7 @@ const About = () => {
                 possible.
                 <br /> I enjoy learning something new and getting feedback to
                 make myself better and improve.
-                <br />I have gained one{" "}
+                <br />I have gained{" "}
                 <span className="key-words">3 years of experience</span> working
                 in a company in Israel as a FullStack Developer, developing web
                 apps dashboard and websites.

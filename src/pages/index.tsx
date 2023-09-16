@@ -125,7 +125,7 @@ export default function Home() {
               </h1>
               <p className="max-w-4xl text-gray-700 dark:text-gray-200 md:mt-6 md:text-lg 2xl:text-xl">
                 I work with react/vue ecosystem and nodejs on server side <br />{" "}
-                I love to learn new tech and experience new challangers
+                I love to learn new tech and experience new challenges
               </p>
               <div className="relative">
                 <Link href={"/about"}>
