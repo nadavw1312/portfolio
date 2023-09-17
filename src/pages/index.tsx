@@ -94,17 +94,17 @@ export default function Home() {
     };
 
     return (
-      <div onClick={scrollTo}>
-        <BsFillArrowDownCircleFill className="animate-bounce w-6 h-6 absolute bottom-10 left-[50%] cursor-pointer" />
-      </div>
+      <BsFillArrowDownCircleFill
+        onClick={scrollTo}
+        className="animate-bounce w-6 h-6 absolute bottom-10 left-[50%] cursor-pointer"
+      />
     );
   };
 
   return (
     <Layout>
       <Seo />
-
-      <section className="min-h-[calc(100vh_-_76px)] flex flex-col justify-center ">
+      <section className="min-h-[calc(100vh_-_76px)] flex flex-col justify-center relative ">
         <ParticlesContainerBrain id="tsparticles" />
         <Fade>
           <div className="layout ">
@@ -141,8 +141,8 @@ export default function Home() {
             />
           </div>
         </Fade>
+        <NextSection section="projectsSection" />
       </section>
-      <NextSection section="projectsSection" />
       <CircuitBoard primary="black" secondary="purple" />
       <Fade>
         <div ref={projectsSection}>
@@ -154,7 +154,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <NextSection section="contactSection" />
         </div>
       </Fade>
       <CircuitBoard primary="black" secondary="purple" />

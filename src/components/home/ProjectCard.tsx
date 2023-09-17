@@ -22,9 +22,9 @@ const ProjectCard = ({
         src={imageSrc}
       />
       <div className="flex flex-col gap-2">
-        <h3 className="font-semibold text-foreground/90 line-clamp-2">
+        <p className="h3 font-semibold text-foreground/90 line-clamp-2">
           {title}
-        </h3>
+        </p>
         <p className="text-small text-foreground/80 line-clamp-3">
           {description}
         </p>

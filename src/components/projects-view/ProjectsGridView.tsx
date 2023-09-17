@@ -20,9 +20,9 @@ const ProjectsGridView = () => {
           shadow="sm"
         >
           <CardBody className="flex flex-col ">
-            <h3 className="font-semibold text-foreground/90 ">
+            <p className="h3 font-semibold text-foreground/90 ">
               {project.title}
-            </h3>
+            </p>
             <p className="text-small text-foreground/80 ">
               {project.description}
             </p>
