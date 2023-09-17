@@ -3,7 +3,6 @@ import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 
 import { AcademicCapIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
 import { useContext, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { useTheme } from "next-themes";
@@ -11,7 +10,7 @@ import { userSelectedThemeContext } from "@/context/userSelectedThemeContext";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Seo from "@/components/Seo";
-import { useBreakpoint } from "@/hooks/useBreakpoint";
+import Fade from "@/components/Fade";
 
 const ContactForm = dynamic(() => import("@/components/home/ContactForm"));
 const HomePageProjects = dynamic(
@@ -46,7 +45,6 @@ export default function Home() {
   const { selectedTheme } = useContext(userSelectedThemeContext);
   const projectsSection = useRef<any>(null);
   const contactSection = useRef(null);
-  const breakpoints = useBreakpoint();
 
   useEffect(() => {
     if (inView) {
@@ -105,15 +103,10 @@ export default function Home() {
   return (
     <Layout>
       <Seo />
-      <motion.div
-        className="relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        viewport={{ amount: 0.5 }}
-      >
-        <section className="min-h-[calc(100vh_-_76px)] flex flex-col justify-center ">
-          <ParticlesContainerBrain id="tsparticles" />
+
+      <section className="min-h-[calc(100vh_-_76px)] flex flex-col justify-center ">
+        <ParticlesContainerBrain id="tsparticles" />
+        <Fade>
           <div className="layout ">
             <div className="flex flex-col items-start gap-2">
               <TypedQuotes className="absolute top-10 left-[50%] transform translate-x-[-50%]" />
@@ -131,7 +124,7 @@ export default function Home() {
                 I love to learn new tech and experience new challenges
               </p>
               <div className="relative">
-                <Link href={"/about"} prefetch={false}  aria-labelledby="about">
+                <Link href={"/about"} prefetch={false} aria-labelledby="about">
                   <GradientOutlineButton aria-labelledby="about me">
                     About me
                   </GradientOutlineButton>
@@ -147,28 +140,23 @@ export default function Home() {
               height={250}
             />
           </div>
-        </section>
-        <NextSection section="projectsSection" />
-      </motion.div>
+        </Fade>
+      </section>
+      <NextSection section="projectsSection" />
       <CircuitBoard primary="black" secondary="purple" />
-      <motion.div
-        className="relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        viewport={{ amount: 0.4 }}
-        ref={projectsSection}
-      >
-        <section className="min-h-screen flex relative py-20">
-          <div className="layout flex flex-col">
-            <p className="h2 mb-4">Projects:</p>
-            <div className="flex-1 flex items-center justify-center overflow-hidden">
-              <HomePageProjects />
+      <Fade>
+        <div ref={projectsSection}>
+          <section className="min-h-screen flex relative py-20">
+            <div className="layout flex flex-col">
+              <p className="h2 mb-4">Projects:</p>
+              <div className="flex-1 flex items-center justify-center overflow-hidden">
+                <HomePageProjects />
+              </div>
             </div>
-          </div>
-        </section>
-        <NextSection section="contactSection" />
-      </motion.div>
+          </section>
+          <NextSection section="contactSection" />
+        </div>
+      </Fade>
       <CircuitBoard primary="black" secondary="purple" />
 
       <section

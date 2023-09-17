@@ -1,23 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
 import Layout from "@/components/layout/Layout";
 import Image from "next/image";
-
 import useLoaded from "@/hooks/useLoaded";
 import clsx from "clsx";
-import SkillIcon from "@/components/SkillIcon";
-import { mainSkillIcons } from "@/constants/skills";
 import Seo from "@/components/Seo";
+import dynamic from "next/dynamic";
+
+const AboutSkillset = dynamic(
+  () => import("@/components/about/AboutSkillset"),
+  {
+    ssr: false,
+  }
+);
 
 const About = () => {
   const isLoaded = useLoaded();
-
-  const SendEmail = () => {
-    const email = "nadavw1999@gmail.com";
-    const subject = "Job offer";
-    const emailBody = "Hi Nadav, I would like to offer you a job.";
-    document.location =
-      "mailto:" + email + "?subject=" + subject + "&body=" + emailBody;
-  };
 
   const MeDsiaply = () => {
     return (
@@ -92,32 +89,8 @@ const About = () => {
                 watching movies and series.
               </p>
             </div>
-            <div className="text-center mt-10">
-              <p className="h2">
-                Proffesional <span className="key-words">Skillset</span>
-              </p>
-              <p className="my-2 text-gray-400 ">
-                if you speak German, it's easier to learn Dutch than it is to
-                learn Mandarin. Similarly, if you know Java, it's easier to
-                learn C# than it is to learn Erlang.
-              </p>
-              <div>
-                <div className="flex flex-wrap text-center justify-center items-center gap-8 my-4">
-                  {Object.keys(mainSkillIcons).map((skill, index) => (
-                    <div
-                      key={skill}
-                      className="w-[7rem] h-[7rem] flex-[0_0_22%] flex  items-center justify-center"
-                    >
-                      <div className="w-[6rem] h-[6rem] p-2 flex items-center justify-center mx-auto shadow-lg dark:shadow-gray-700 border hover:border-4  dark:border-primary-color">
-                        <SkillIcon
-                          skill={skill}
-                          className="h-8 w-8 sm:h-[3rem] sm:w-[3rem] m-0"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="mt-10">
+              <AboutSkillset />
             </div>
           </div>
         </section>

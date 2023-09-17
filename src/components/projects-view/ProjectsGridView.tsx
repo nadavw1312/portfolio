@@ -19,7 +19,7 @@ const ProjectsGridView = () => {
           className="max-w-[100%] sm:max-w-[45%] lg:max-w-[30%] flex flex-col  border-none bg-background/60 dark:bg-default-100/50  hover:scale-105 shadow-lg dark:shadow-slate-800"
           shadow="sm"
         >
-          <CardBody className="flex flex-col gap-">
+          <CardBody className="flex flex-col ">
             <h3 className="font-semibold text-foreground/90 ">
               {project.title}
             </h3>
