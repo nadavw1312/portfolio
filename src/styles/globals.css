@@ -67,9 +67,13 @@
     @apply mx-auto w-11/12;
   }
 
-  /* Class to adjust with sticky footer */
-  .min-h-main {
-    @apply min-h-[calc(100vh_-_160px)];
+  /* Class to adjust with header and footer */
+  .min-h-footer-header {
+    @apply min-h-[calc(100vh_-_192px)];
+  }
+  /* Class to adjust with header */
+  .min-h-header {
+    @apply min-h-[calc(100vh_-_80px)];
   }
 }
 

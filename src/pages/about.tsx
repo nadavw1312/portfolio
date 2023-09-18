@@ -45,7 +45,7 @@ const About = () => {
         templateTitle="About"
         description="Nadav Bourla is a full-stack developer with 3 years of experience. He is passionate about writing clean, efficient and optimized code."
       />
-      <main className="min-h-main relative">
+      <main className="min-h-header relative">
         <section className={clsx(isLoaded && "fade-in-start", "flex flex-col")}>
           <MeDsiaply />
           <div className="layout  z-10 relative m-auto">
