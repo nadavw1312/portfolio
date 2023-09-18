@@ -46,7 +46,6 @@ export default function Home() {
   const { selectedTheme } = useContext(userSelectedThemeContext);
   const projectsSection = useRef<any>(null);
   const contactSection = useRef(null);
-  const isLoaded = usePreloadState();
 
   useEffect(() => {
     if (inView) {

@@ -124,12 +124,5 @@ export default function ParticlesContainerBrain(
     },
   };
 
-  return (
-    <Particles
-      id={props.id}
-      options={options}
-      init={customInit}
-      className="animate-appearance-in"
-    />
-  );
+  return <Particles id={props.id} options={options} init={customInit} />;
 }
