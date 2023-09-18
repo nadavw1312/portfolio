@@ -61,7 +61,7 @@ export default function Home() {
       {
         name: "Resume",
         icon: <AcademicCapIcon className="h-4 w-4" />,
-        href: "https://drive.google.com/file/d/1dHBmv2yTU4zWminXn1Sw-p1PZ1WZk8yA/view?usp=drive_link",
+        href: "https://drive.google.com/file/d/1jcqG5nbV6JYtpIUbfaCOcO0wk0TqPy4R/view?usp=sharing",
       },
     ];
 
