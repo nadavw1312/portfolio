@@ -9,7 +9,6 @@ export interface Project {
   imageSrc: string;
 }
 
-
 const projects = [
   {
     title: "Dashboard and web app for municipalities",
@@ -46,15 +45,6 @@ const projects = [
     showOnHomePage: true,
   },
   {
-    title: "crypto market",
-    description: "Showin crypto currencies and their prices",
-    associated: [],
-    skills: [skills.Nextjs, skills.TypeScript, skills.Tailwindcss],
-    link: "https://crypto-market-bice.vercel.app/",
-    imageSrc: "/crypto-market.webp",
-    showOnHomePage: false,
-  },
-  {
     title: "Manage Books",
     description: "Manage books and their authors",
     associated: [],
@@ -68,6 +58,15 @@ const projects = [
     link: "https://book-view.onrender.com/",
     imageSrc: "/book-view.webp",
     showOnHomePage: true,
+  },
+  {
+    title: "Crypto Market",
+    description: "Showing cryptocurrencies and their prices",
+    associated: [],
+    skills: [skills.Nextjs, skills.TypeScript, skills.Tailwindcss],
+    link: "https://crypto-market-bice.vercel.app/",
+    imageSrc: "/crypto-market.webp",
+    showOnHomePage: false,
   },
 ];
 
