@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <Layout>
       <Seo />
-      <section className="min-h-[calc(100vh_-_76px)] flex flex-col justify-center relative ">
+      <section className="min-h-header flex flex-col justify-center relative ">
         <ParticlesContainerBrain id="tsparticles" />
         <Fade>
           <div className="layout ">
@@ -160,7 +160,7 @@ export default function Home() {
 
       <section
         ref={contactSection}
-        className="min-h-[calc(100vh_-_200px)] flex relative"
+        className="min-h-footer-header flex relative"
       >
         {inView && <MatrixRainAnimation />}
         <div

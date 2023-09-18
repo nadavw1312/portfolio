@@ -5,7 +5,7 @@ import ConnectWithMe from "../ConnectWithMe";
 
 const Footer = () => {
   return (
-    <footer className=" foorer h-28 flex flex-wrap justify-around items-center p-2">
+    <footer id="main-footer" className=" foorer h-28 flex flex-wrap justify-around items-center p-2">
       <div className="footer-text flex-1 flex items-center justify-center">
         <p>
           No &copy; copyright issues.

@@ -72,21 +72,23 @@ const About = () => {
                 developer with computer science background.
               </p>
               <p className="my-10" data-fade="5">
-                There are a lot of things and technologies to learn in frontend
-                and backend development and I am motivated to learn as much as
-                possible.
-                <br /> I enjoy learning something new and getting feedback to
-                make myself better and improve.
-                <br />I have gained{" "}
-                <span className="key-words">3 years of experience</span> working
-                in a company in Israel as a FullStack Developer, developing web
-                apps dashboard and websites.
+                Frontend and backend development encompass a wide array of
+                technologies, and I'm highly driven to expand my knowledge
+                across both domains. I thrive on the process of continuous
+                learning, actively seeking new challenges, and using feedback to
+                refine my skills and grow. With{" "}
+                <span className="key-words">
+                  three years of professional experience
+                </span>{" "}
+                as a FullStack Developer at WeDev company, I've had the
+                opportunity to work on web apps, dashboards, and websites,
+                contributing to my well-rounded skill set.
               </p>
               <p data-fade="6">
-                When I'm not busy scribbling code, I like to keep things
-                interesting by playing video games, doing sport like tennis,
-                football and basketball, and sometimes surfing, oh and ofc
-                watching movies and series.
+                When I'm not engrossed in coding, I enjoy adding some excitement
+                to my life by engaging in activities such as playing video
+                games, participating in sports like tennis, football, and
+                basketball, surfing, and watching movies and series.
               </p>
             </div>
             <div className="mt-10">
