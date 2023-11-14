@@ -78,7 +78,7 @@ const About = () => {
                 learning, actively seeking new challenges, and using feedback to
                 refine my skills and grow. With{" "}
                 <span className="key-words">
-                  three years of professional experience
+                more than three years of professional experience
                 </span>{" "}
                 as a FullStack Developer at WeDev company, I've had the
                 opportunity to work on web apps, dashboards, and websites,
