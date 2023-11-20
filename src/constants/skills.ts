@@ -15,6 +15,9 @@ import {
   SiGit,
   SiLinux,
   SiSass,
+  SiPython,
+  SiFastapi,
+  SiPostgresql,
 } from "react-icons/si";
 
 const skills = {
@@ -24,6 +27,9 @@ const skills = {
   Nextjs: "Nextjs",
   TypeScript: "TypeScript",
   JavaScript: "JavaScript",
+  Python: "Python",
+  FastApi: "FastApi",
+  PostgreSql: "PostgreSql",
   NodeJS: "NodeJS",
   Express: "Express",
   AWS: "AWS",
@@ -51,11 +57,17 @@ const skillIcons: { [key: string]: IconType } = {
   Git: SiGit,
   Linux: SiLinux,
   Sass: SiSass,
+  Python: SiPython,
+  FastApi: SiFastapi,
+  PostgreSql: SiPostgresql,
 };
 
 const mainSkillIcons = {
   TypeScript: SiTypescript,
   JavaScript: SiJavascript,
+  Python: SiPython,
+  FastApi: SiFastapi,
+  PostgreSql: SiPostgresql,
   React: SiReact,
   Vue: SiVuedotjs,
   NodeJS: SiNodedotjs,
