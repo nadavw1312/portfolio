@@ -11,7 +11,6 @@ import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import Link from "next/link";
 import Seo from "@/components/Seo";
 import Fade from "@/components/Fade";
-import { usePreloadState } from "@/context/PreloadContext";
 
 const ContactForm = dynamic(() => import("@/components/home/ContactForm"));
 const HomePageProjects = dynamic(
